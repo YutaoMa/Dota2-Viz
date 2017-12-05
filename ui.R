@@ -5,8 +5,7 @@ library(dplyr)
 library(plotly)
 library(shiny)
 
-shinyUI(fluidPage(
-  mainPanel(
-    plotlyOutput('heroStats')
-  )
+shinyUI(navbarPage('Dota 2 Data Visualization',
+    tabPanel("Hero Win Rates", plotlyOutput('heroStats')),
+    tabPanel("Pro vs. All Win Rates", plotlyOutput('proStats'))
 ))
